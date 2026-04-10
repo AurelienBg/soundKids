@@ -42,7 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 SoundKids
               </span>
               <div className="ml-auto flex items-center gap-1.5">
-                <span className="text-xs font-medium text-[#1D9E75] bg-[#1D9E75]/10 rounded-full px-2 py-0.5">
+                <span className="text-xs font-medium text-[#378ADD] bg-[#378ADD]/10 rounded-full px-2 py-0.5">
                   3–6 ans
                 </span>
                 <span className="text-xs font-medium text-gray-300 bg-gray-100 rounded-full px-2 py-0.5">

@@ -3,14 +3,14 @@ import PhaseCard from './PhaseCard'
 import StepRenderer from './StepRenderer'
 
 const colorMap: Record<string, string> = {
-  teal: 'text-[#1D9E75]',
+  teal: 'text-[#378ADD]',
   amber: 'text-[#BA7517]',
   coral: 'text-[#D85A30]',
   blue: 'text-[#185FA5]',
 }
 
 const bgColorMap: Record<string, string> = {
-  teal: 'bg-[#1D9E75]/10',
+  teal: 'bg-[#378ADD]/10',
   amber: 'bg-[#BA7517]/10',
   coral: 'bg-[#D85A30]/10',
   blue: 'bg-[#185FA5]/10',

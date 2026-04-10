@@ -12,7 +12,7 @@ interface PhaseCardProps {
 }
 
 const colorMap: Record<string, string> = {
-  teal: 'bg-[#1D9E75]',
+  teal: 'bg-[#378ADD]',
   amber: 'bg-[#BA7517]',
   coral: 'bg-[#D85A30]',
   blue: 'bg-[#185FA5]',

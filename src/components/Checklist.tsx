@@ -40,7 +40,7 @@ export default function Checklist({ items }: { items: string[] }) {
         >
           <div
             className={`w-5 h-5 rounded-md border-2 flex items-center justify-center shrink-0 transition-colors ${
-              checked[i] ? 'bg-[#1D9E75] border-[#1D9E75]' : 'border-gray-300'
+              checked[i] ? 'bg-[#378ADD] border-[#378ADD]' : 'border-gray-300'
             }`}
           >
             {checked[i] && (

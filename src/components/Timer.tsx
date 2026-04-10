@@ -40,7 +40,7 @@ export default function Timer() {
   const secs = seconds % 60
   const progress = Math.min((seconds / (TOTAL_MINUTES * 60)) * 100, 100)
 
-  let barColor = '#1D9E75'
+  let barColor = '#378ADD'
   if (minutes >= TOTAL_MINUTES) barColor = '#DC2626'
   else if (minutes >= 90) barColor = '#EA580C'
 
@@ -54,7 +54,7 @@ export default function Timer() {
           {!running ? (
             <button
               onClick={start}
-              className="rounded-lg bg-[#1D9E75] text-white text-xs font-semibold px-3 py-1.5 active:opacity-80"
+              className="rounded-lg bg-[#378ADD] text-white text-xs font-semibold px-3 py-1.5 active:opacity-80"
             >
               {seconds > 0 ? 'Reprendre' : 'Démarrer'}
             </button>
