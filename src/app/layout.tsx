@@ -30,8 +30,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="apple-touch-icon" href="/icons/icon-192.png" />
       </head>
       <body className="min-h-dvh flex flex-col">
-        {/* Header */}
-        <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-gray-100 safe-area-top">
+        {/* Mobile header — hidden on desktop */}
+        <header className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-gray-100 safe-area-top">
           <div className="max-w-lg mx-auto px-4 pt-2 pb-2">
             <div className="flex items-center gap-2.5 mb-2">
               <SoundKidsLogo size={28} />
@@ -55,13 +55,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </header>
 
         {/* Content */}
-        <main className="flex-1 pt-[120px] pb-[72px]">
-          <div className="max-w-lg mx-auto px-4 py-4">
+        <main className="flex-1 pt-[120px] pb-[72px] lg:pt-0 lg:pb-0 lg:pl-[240px]">
+          <div className="max-w-lg mx-auto px-4 py-4 lg:max-w-3xl lg:py-8 lg:px-8">
             {children}
           </div>
         </main>
 
-        {/* Bottom Nav */}
+        {/* Nav (sidebar on desktop, bottom bar on mobile) */}
         <BottomNav />
       </body>
     </html>
