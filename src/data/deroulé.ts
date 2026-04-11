@@ -47,13 +47,13 @@ export const phases: Phase[] = [
       },
       {
         id: 'conte_vibro',
-        title: 'B. Conte de Vibro',
+        title: 'B. Conte de Vibrato',
         duration: '5 min',
         steps: [
           {
             type: 'vibro',
             content:
-              "Il y a très très longtemps, bien avant les radios et les enceintes, le monde était... silencieux. Dans ce monde vivait un petit lutin qui s'appelait Vibro. Il avait plein de chansons dans sa tête, mais personne ne pouvait les entendre.\n\nUn jour, il trouva un fil d'araignée tendu entre deux branches. Il tira dessus... TING ! Un son était né !\n\nVibro comprit un grand secret : pour faire de la musique, il faut quelque chose qui vibre. Mais le son du fil était tout petit... Alors il trouva une vieille écorce creuse, posa son fil dessus et... TOOOING ! Le son devint grand et joyeux !\n\nAujourd'hui, Vibro vous a confié une mission : fabriquer des maisons pour les sons. On va prendre des élastiques-araignées, des boîtes-maisons, et réveiller la musique qui dort à l'intérieur !",
+              "Il y a très très longtemps, bien avant les radios et les enceintes, le monde était... silencieux. Dans ce monde vivait un petit lutin qui s'appelait Vibrato. Il avait plein de chansons dans sa tête, mais personne ne pouvait les entendre.\n\nUn jour, il trouva un fil d'araignée tendu entre deux branches. Il tira dessus... TING ! Un son était né !\n\nVibrato comprit un grand secret : pour faire de la musique, il faut quelque chose qui vibre. Mais le son du fil était tout petit... Alors il trouva une vieille écorce creuse, posa son fil dessus et... TOOOING ! Le son devint grand et joyeux !\n\nAujourd'hui, Vibrato vous a confié une mission : fabriquer des maisons pour les sons. On va prendre des élastiques-araignées, des boîtes-maisons, et réveiller la musique qui dort à l'intérieur !",
           },
           { type: 'tip', content: 'Interaction : mimer pincer corde invisible → « TING ! »' },
           { type: 'tip', content: 'Conseil : tenir une boîte cachée, la révéler à la fin.' },
