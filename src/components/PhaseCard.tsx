@@ -49,9 +49,7 @@ export default function PhaseCard({ title, duration, zone, color = 'teal', defau
           </svg>
         </div>
       </button>
-      <div
-        className={`transition-all duration-300 ease-in-out overflow-hidden ${open ? 'max-h-[3000px] opacity-100' : 'max-h-0 opacity-0'}`}
-      >
+      {open && <div>
         <div className="px-4 pb-4 space-y-3">
           {children}
         </div>
@@ -60,7 +58,7 @@ export default function PhaseCard({ title, duration, zone, color = 'teal', defau
             {musicSlot}
           </div>
         )}
-      </div>
+      </div>}
     </div>
   )
 }
