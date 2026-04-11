@@ -119,7 +119,7 @@ export const playlist: Track[] = [
     id: 'sir_duke',
     title: 'Sir Duke',
     artist: 'Stevie Wonder',
-    spotifyUrl: 'https://open.spotify.com/track/23dwpRvxImSXGWXSFJ2ldh',
+    spotifyUrl: 'https://open.spotify.com/track/4pNiE4LCVV74vfIBaUHm1b',
     moment: "Aujourd'hui — intro 40 sec",
     volume: 70,
     loop: false,
