@@ -56,7 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* Content */}
         <main className="flex-1 pt-[120px] pb-[72px] lg:pt-0 lg:pb-0 lg:pl-[240px]">
-          <div className="max-w-lg mx-auto px-4 py-4 lg:max-w-3xl lg:py-8 lg:px-8">
+          <div className="max-w-lg mx-auto px-4 py-4 lg:max-w-6xl lg:py-8 lg:px-8">
             {children}
           </div>
         </main>

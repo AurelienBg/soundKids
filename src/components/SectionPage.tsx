@@ -32,6 +32,7 @@ export default function SectionPage({ sectionId }: { sectionId: SectionId }) {
           </span>
         )}
       </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
       {phase.subPhases.map((sub, i) => {
         const musicSteps = sub.steps.filter((s) => s.type === 'music')
         const otherSteps = sub.steps.filter((s) => s.type !== 'music')
@@ -60,6 +61,7 @@ export default function SectionPage({ sectionId }: { sectionId: SectionId }) {
           </PhaseCard>
         )
       })}
+      </div>
     </div>
   )
 }
