@@ -207,8 +207,8 @@ export const playlist: Track[] = [
   },
   {
     id: 'sir_duke_final',
-    title: "L'éléphant (Carnaval des animaux)",
-    artist: 'Saint-Saëns',
+    title: "Un éléphant qui se balançait",
+    artist: 'Comptine',
     spotifyUrl: 'https://open.spotify.com/track/23dwpRvxImSXGWXSFJ2ldh',
     moment: 'Concert — salut final',
     volume: 80,
