@@ -25,7 +25,7 @@ export default function MusicButton({ trackId }: { trackId: string }) {
       </div>
       <div className="flex items-center gap-2 shrink-0">
         <span className="text-white/90 text-xs font-medium bg-white/20 rounded-full px-2 py-0.5">
-          {track.volume}%
+          Vol. {track.volume}%
         </span>
         {track.loop && (
           <span className="text-white/90 text-[10px] font-medium bg-white/20 rounded-full px-2 py-0.5">

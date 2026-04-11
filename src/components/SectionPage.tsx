@@ -32,20 +32,34 @@ export default function SectionPage({ sectionId }: { sectionId: SectionId }) {
           </span>
         )}
       </div>
-      {phase.subPhases.map((sub, i) => (
-        <PhaseCard
-          key={sub.id}
-          title={sub.title}
-          duration={sub.duration}
-          zone={sub.zone}
-          color={phase.color}
-          defaultOpen={i === 0}
-        >
-          {sub.steps.map((step, j) => (
-            <StepRenderer key={j} step={step} />
-          ))}
-        </PhaseCard>
-      ))}
+      {phase.subPhases.map((sub, i) => {
+        const musicSteps = sub.steps.filter((s) => s.type === 'music')
+        const otherSteps = sub.steps.filter((s) => s.type !== 'music')
+
+        return (
+          <PhaseCard
+            key={sub.id}
+            title={sub.title}
+            duration={sub.duration}
+            zone={sub.zone}
+            color={phase.color}
+            defaultOpen={i === 0}
+            musicSlot={
+              musicSteps.length > 0 ? (
+                <>
+                  {musicSteps.map((step, j) => (
+                    <StepRenderer key={j} step={step} />
+                  ))}
+                </>
+              ) : undefined
+            }
+          >
+            {otherSteps.map((step, j) => (
+              <StepRenderer key={j} step={step} />
+            ))}
+          </PhaseCard>
+        )
+      })}
     </div>
   )
 }

@@ -9,6 +9,7 @@ interface PhaseCardProps {
   color?: string
   defaultOpen?: boolean
   children: React.ReactNode
+  musicSlot?: React.ReactNode
 }
 
 const colorMap: Record<string, string> = {
@@ -18,7 +19,7 @@ const colorMap: Record<string, string> = {
   blue: 'bg-[#185FA5]',
 }
 
-export default function PhaseCard({ title, duration, zone, color = 'teal', defaultOpen = false, children }: PhaseCardProps) {
+export default function PhaseCard({ title, duration, zone, color = 'teal', defaultOpen = false, children, musicSlot }: PhaseCardProps) {
   const [open, setOpen] = useState(defaultOpen)
 
   return (
@@ -49,11 +50,16 @@ export default function PhaseCard({ title, duration, zone, color = 'teal', defau
         </div>
       </button>
       <div
-        className={`transition-all duration-300 ease-in-out overflow-hidden ${open ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'}`}
+        className={`transition-all duration-300 ease-in-out overflow-hidden ${open ? 'max-h-[3000px] opacity-100' : 'max-h-0 opacity-0'}`}
       >
         <div className="px-4 pb-4 space-y-3">
           {children}
         </div>
+        {musicSlot && (
+          <div className="sticky bottom-0 px-4 pb-4 pt-2 bg-gradient-to-t from-white via-white to-white/80 space-y-2 border-t border-gray-50">
+            {musicSlot}
+          </div>
+        )}
       </div>
     </div>
   )

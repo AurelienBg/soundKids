@@ -1,7 +1,7 @@
 export type SectionId = 'introduction' | 'voyage' | 'fabrication' | 'concert' | 'conclusion' | 'preparation'
 
 export interface Step {
-  type: 'text' | 'music' | 'vibro' | 'tip' | 'question' | 'photo' | 'list'
+  type: 'text' | 'scene' | 'music' | 'vibro' | 'tip' | 'question' | 'photo' | 'list'
   content?: string
   trackId?: string
   question?: string
@@ -38,10 +38,10 @@ export const phases: Phase[] = [
         title: 'A. Accueil',
         duration: '5 min',
         steps: [
-          { type: 'text', content: 'Enfants assis en cercle au centre.' },
-          { type: 'text', content: '« Levez la main si vous aimez la musique ! »' },
-          { type: 'text', content: '« Aujourd\'hui voyage MAGIQUE dans le temps, jusqu\'à 40 000 ans en arrière ! »' },
-          { type: 'text', content: '« Mais d\'abord... il faut s\'entraîner à bien ÉCOUTER. »' },
+          { type: 'scene', content: 'Enfants assis en cercle au centre.' },
+          { type: 'scene', content: '« Levez la main si vous aimez la musique ! »' },
+          { type: 'scene', content: '« Aujourd\'hui voyage MAGIQUE dans le temps, jusqu\'à 40 000 ans en arrière ! »' },
+          { type: 'scene', content: '« Mais d\'abord... il faut s\'entraîner à bien ÉCOUTER. »' },
           { type: 'tip', content: 'Musique : silence total.' },
         ],
       },
@@ -64,10 +64,10 @@ export const phases: Phase[] = [
         title: 'C. Jeu du silence et écoute de soi',
         duration: '5 min',
         steps: [
-          { type: 'text', content: '30 sec silence, yeux fermés → « Son le plus lointain ? Le plus proche ? »' },
-          { type: 'text', content: 'Le cœur : main poitrine → « Boum-boum... premier rythme ! » → taper ensemble.' },
-          { type: 'text', content: 'La voix : main sur gorge → « AAAAAAH — Ça VIBRE ! »' },
-          { type: 'text', content: 'Grave (ours, se pencher) : OOOOOH / Aigu (oiseau, pointe pieds) : IIIIIII' },
+          { type: 'scene', content: '30 sec silence, yeux fermés → « Son le plus lointain ? Le plus proche ? »' },
+          { type: 'scene', content: 'Le cœur : main poitrine → « Boum-boum... premier rythme ! » → taper ensemble.' },
+          { type: 'scene', content: 'La voix : main sur gorge → « AAAAAAH — Ça VIBRE ! »' },
+          { type: 'scene', content: 'Grave (ours, se pencher) : OOOOOH / Aigu (oiseau, pointe pieds) : IIIIIII' },
           { type: 'tip', content: 'Musique : silence total.' },
         ],
       },
@@ -98,8 +98,8 @@ export const phases: Phase[] = [
         title: 'E. Transition vers le voyage',
         duration: '3 min',
         steps: [
-          { type: 'text', content: 'Extraits Pierre et le Loup (20-30 sec chacun) : Pierre (cordes) → Loup (cuivres) → Chasseurs (percussions).' },
-          { type: 'text', content: 'Compte à rebours : « 10-9-8-7-6-5-4-3-2-1... »' },
+          { type: 'scene', content: 'Extraits Pierre et le Loup (20-30 sec chacun) : Pierre (cordes) → Loup (cuivres) → Chasseurs (percussions).' },
+          { type: 'scene', content: 'Compte à rebours : « 10-9-8-7-6-5-4-3-2-1... »' },
           { type: 'music', trackId: 'pierre' },
         ],
       },
@@ -118,10 +118,10 @@ export const phases: Phase[] = [
         zone: 'Zone 1',
         steps: [
           { type: 'tip', content: 'Setup : éteindre lumières, allumer lampe torche « feu ».' },
-          { type: 'text', content: 'Pierres frappées CLAC-CLAC → rythme 1-2-3-4 (20 sec).' },
-          { type: 'text', content: 'Percussions corporelles : mains (CLAP) → pieds (STOMP) → cuisses (PAT) → poitrine (BOOM).' },
-          { type: 'text', content: 'Danse tribale CLAP-CLAP-STOMP × 4, tourner, crescendo 30 sec.' },
-          { type: 'text', content: 'Voix : OOOOOH / IIIIIII / OUH OUH AH AH → fredonner : « Hmmmm ».' },
+          { type: 'scene', content: 'Pierres frappées CLAC-CLAC → rythme 1-2-3-4 (20 sec).' },
+          { type: 'scene', content: 'Percussions corporelles : mains (CLAP) → pieds (STOMP) → cuisses (PAT) → poitrine (BOOM).' },
+          { type: 'scene', content: 'Danse tribale CLAP-CLAP-STOMP × 4, tourner, crescendo 30 sec.' },
+          { type: 'scene', content: 'Voix : OOOOOH / IIIIIII / OUH OUH AH AH → fredonner : « Hmmmm ».' },
           { type: 'music', trackId: 'fire' },
           { type: 'photo', photo: '/photos/grotte.jpg' },
         ],
@@ -132,10 +132,10 @@ export const phases: Phase[] = [
         duration: '7 min',
         zone: 'Zone 2',
         steps: [
-          { type: 'text', content: 'Marche sur feuilles : « CRUNCH CRUNCH ! »' },
-          { type: 'text', content: 'Bâtons : tronc (TOC) · pierre (TIC) · sol (BOOM) → 2 min exploration libre.' },
-          { type: 'text', content: 'Roseau creux soufflé : FIUUUUU = premier instrument à vent.' },
-          { type: 'text', content: 'Coquillage : HOUUUUU' },
+          { type: 'scene', content: 'Marche sur feuilles : « CRUNCH CRUNCH ! »' },
+          { type: 'scene', content: 'Bâtons : tronc (TOC) · pierre (TIC) · sol (BOOM) → 2 min exploration libre.' },
+          { type: 'scene', content: 'Roseau creux soufflé : FIUUUUU = premier instrument à vent.' },
+          { type: 'scene', content: 'Coquillage : HOUUUUU' },
           { type: 'music', trackId: 'birds' },
           { type: 'photo', photo: '/photos/foret.jpg' },
         ],
@@ -146,9 +146,9 @@ export const phases: Phase[] = [
         duration: '4 min',
         zone: 'Centre',
         steps: [
-          { type: 'text', content: 'Mimer arc, viser, tirer → WHOOSH → corde ZING !' },
-          { type: 'text', content: 'Pincer élastique tendu → vibration → lien avec gorge.' },
-          { type: 'text', content: 'Ajouter courge creuse → TOOOING ! → ancêtre harpe/guitare/piano.' },
+          { type: 'scene', content: 'Mimer arc, viser, tirer → WHOOSH → corde ZING !' },
+          { type: 'scene', content: 'Pincer élastique tendu → vibration → lien avec gorge.' },
+          { type: 'scene', content: 'Ajouter courge creuse → TOOOING ! → ancêtre harpe/guitare/piano.' },
           { type: 'music', trackId: 'wind' },
           { type: 'music', trackId: 'mohicans' },
           {
@@ -164,8 +164,8 @@ export const phases: Phase[] = [
         duration: '3 min',
         zone: 'Zone 2b',
         steps: [
-          { type: 'text', content: 'Peau tendue sur tronc → BOUM !' },
-          { type: 'text', content: 'Enfants touchent → sentent la vibration.' },
+          { type: 'scene', content: 'Peau tendue sur tronc → BOUM !' },
+          { type: 'scene', content: 'Enfants touchent → sentent la vibration.' },
           { type: 'music', trackId: 'river' },
           {
             type: 'question',
@@ -180,7 +180,7 @@ export const phases: Phase[] = [
         duration: '2 min',
         zone: 'Zone 3',
         steps: [
-          { type: 'text', content: 'Marche égyptienne. Flûtes à trous, harpes, systres.' },
+          { type: 'scene', content: 'Marche égyptienne. Flûtes à trous, harpes, systres.' },
           { type: 'music', trackId: 'egypt' },
           { type: 'photo', photo: '/photos/egypte.jpg' },
         ],
@@ -191,7 +191,7 @@ export const phases: Phase[] = [
         duration: '2 min',
         zone: 'Zone 4',
         steps: [
-          { type: 'text', content: 'Cercle coussins. Mimer poète + lyre imaginaire : « la-la-la ».' },
+          { type: 'scene', content: 'Cercle coussins. Mimer poète + lyre imaginaire : « la-la-la ».' },
           { type: 'music', trackId: 'greece' },
           { type: 'music', trackId: 'zorba' },
           { type: 'photo', photo: '/photos/grece.jpg' },
@@ -203,7 +203,7 @@ export const phases: Phase[] = [
         duration: '3 min',
         zone: 'Zone 5',
         steps: [
-          { type: 'text', content: 'Chant unisson → HARMONIE : groupe 1 « OOOOOH » + groupe 2 « AAAAH ».' },
+          { type: 'scene', content: 'Chant unisson → HARMONIE : groupe 1 « OOOOOH » + groupe 2 « AAAAH ».' },
           { type: 'music', trackId: 'gregorian' },
           { type: 'photo', photo: '/photos/medieval.jpg' },
         ],
@@ -214,7 +214,7 @@ export const phases: Phase[] = [
         duration: '2 min',
         zone: 'Centre',
         steps: [
-          { type: 'text', content: 'Lumières rallumées. Pierres→batterie / Roseau→flûte / Arc→guitare. Tous dansent !' },
+          { type: 'scene', content: 'Lumières rallumées. Pierres→batterie / Roseau→flûte / Arc→guitare. Tous dansent !' },
           { type: 'music', trackId: 'sir_duke' },
         ],
       },
@@ -310,9 +310,9 @@ export const phases: Phase[] = [
         title: 'A. Échauffement',
         duration: '5 min',
         steps: [
-          { type: 'text', content: 'Tour de cercle : chacun joue 3 sec.' },
-          { type: 'text', content: 'Code chef : pointer→jouer · mains haut=FORT · bas=DOUX · rapide=VITE · lent=LENT' },
-          { type: 'text', content: 'Groupes : Percussions (gauche) · Vents (milieu) · Cordes (droite)' },
+          { type: 'scene', content: 'Tour de cercle : chacun joue 3 sec.' },
+          { type: 'scene', content: 'Code chef : pointer→jouer · mains haut=FORT · bas=DOUX · rapide=VITE · lent=LENT' },
+          { type: 'scene', content: 'Groupes : Percussions (gauche) · Vents (milieu) · Cordes (droite)' },
           { type: 'tip', content: 'Silence total — pas de musique enregistrée.' },
         ],
       },
@@ -322,11 +322,11 @@ export const phases: Phase[] = [
         duration: '13 min',
         steps: [
           { type: 'tip', content: 'SILENCE TOTAL — PAS DE MUSIQUE ENREGISTRÉE' },
-          { type: 'text', content: 'Acte 1 Préhistoire (3 min) : silence → mains → pieds → percussions → danse → extinction.' },
-          { type: 'text', content: 'Acte 2 Nature (2 min) : SHHH · vents doux · oiseaux · HOUUU · extinction.' },
-          { type: 'text', content: 'Acte 3 Arc (2 min) : percussions douces · cordes ZING · tous ensemble · crescendo.' },
-          { type: 'text', content: 'Acte 4 Antiquité (3 min) : fanfare TATATAAA · harpes · fredonnement · fête · STOP brutal.' },
-          { type: 'text', content: 'Acte 5 Grand final (3 min) : harmonie OOO/AAA → château → crescendo géant → EXPLOSION → 3 sec silence.' },
+          { type: 'scene', content: 'Acte 1 Préhistoire (3 min) : silence → mains → pieds → percussions → danse → extinction.' },
+          { type: 'scene', content: 'Acte 2 Nature (2 min) : SHHH · vents doux · oiseaux · HOUUU · extinction.' },
+          { type: 'scene', content: 'Acte 3 Arc (2 min) : percussions douces · cordes ZING · tous ensemble · crescendo.' },
+          { type: 'scene', content: 'Acte 4 Antiquité (3 min) : fanfare TATATAAA · harpes · fredonnement · fête · STOP brutal.' },
+          { type: 'scene', content: 'Acte 5 Grand final (3 min) : harmonie OOO/AAA → château → crescendo géant → EXPLOSION → 3 sec silence.' },
         ],
       },
       {
@@ -334,10 +334,10 @@ export const phases: Phase[] = [
         title: 'C. Salut final',
         duration: '2 min',
         steps: [
-          { type: 'text', content: 'Percussions → « Les PREMIERS instruments ! »' },
-          { type: 'text', content: 'Vents → « Le souffle de la musique ! »' },
-          { type: 'text', content: 'Cordes → « De l\'arc à la guitare ! »' },
-          { type: 'text', content: '« TOUT L\'ORCHESTRE ! 1-2-3 SALUT ! »' },
+          { type: 'scene', content: 'Percussions → « Les PREMIERS instruments ! »' },
+          { type: 'scene', content: 'Vents → « Le souffle de la musique ! »' },
+          { type: 'scene', content: 'Cordes → « De l\'arc à la guitare ! »' },
+          { type: 'scene', content: '« TOUT L\'ORCHESTRE ! 1-2-3 SALUT ! »' },
           { type: 'music', trackId: 'sir_duke_final' },
         ],
       },
@@ -354,7 +354,7 @@ export const phases: Phase[] = [
         title: 'Partage en cercle',
         duration: '3 min',
         steps: [
-          { type: 'text', content: 'Questions ouvertes aux enfants.' },
+          { type: 'scene', content: 'Questions ouvertes aux enfants.' },
           { type: 'music', trackId: 'claire' },
         ],
       },
@@ -368,7 +368,7 @@ export const phases: Phase[] = [
             content:
               "Les hommes préhistoriques, les musiciens égyptiens, les moines du Moyen-Âge et VOUS aujourd'hui... Vous faites TOUS la même chose. La musique est en VOUS.",
           },
-          { type: 'text', content: 'Rituel : main sur cœur → « Boum-boum... » → grande respiration → photo de groupe.' },
+          { type: 'scene', content: 'Rituel : main sur cœur → « Boum-boum... » → grande respiration → photo de groupe.' },
         ],
       },
     ],
