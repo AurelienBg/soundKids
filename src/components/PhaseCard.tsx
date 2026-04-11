@@ -23,7 +23,7 @@ export default function PhaseCard({ title, duration, zone, color = 'teal', defau
   const [open, setOpen] = useState(defaultOpen)
 
   return (
-    <div className="rounded-2xl bg-white shadow-sm border border-gray-100 overflow-hidden">
+    <div className="rounded-2xl bg-white shadow-sm border border-gray-100 overflow-hidden self-start">
       <button
         onClick={() => setOpen(!open)}
         className="flex items-center w-full px-4 py-3.5 text-left gap-3"
