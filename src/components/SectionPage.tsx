@@ -35,7 +35,9 @@ export default function SectionPage({ sectionId }: { sectionId: SectionId }) {
 
   const goTo = useCallback((index: number) => {
     setCurrent(index)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    // Scroll the main content area back to top
+    const main = document.querySelector('main')
+    if (main) main.scrollTo({ top: 0, behavior: 'smooth' })
   }, [])
 
   const prev = useCallback(() => {

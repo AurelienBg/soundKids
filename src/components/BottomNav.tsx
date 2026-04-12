@@ -73,7 +73,7 @@ export default function BottomNav() {
       </aside>
 
       {/* Mobile bottom nav */}
-      <nav className="lg:hidden fixed bottom-0 left-0 right-0 bg-[#F0F4FA]/95 backdrop-blur-lg border-t border-[#D6E3F3] z-50 safe-area-bottom">
+      <nav className="lg:hidden bg-[#F0F4FA] border-t border-[#D6E3F3] safe-area-bottom">
         <div className="flex justify-around items-center h-14 max-w-lg mx-auto px-1">
           {tabs.map((tab) => {
             const active = pathname === tab.href

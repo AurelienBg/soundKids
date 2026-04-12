@@ -13,13 +13,17 @@
   --color-primary-dark: var(--color-primary-dark);
 }
 
-body {
+html, body {
   background: #EDF3FA;
   color: #1a1a1a;
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
   overscroll-behavior: none;
+  overflow: hidden;
+  height: 100%;
+  position: fixed;
+  width: 100%;
 }
 
 .safe-area-bottom {
