@@ -23,7 +23,7 @@ export default function BottomNav() {
       <aside className="hidden lg:flex fixed left-0 top-0 bottom-0 w-[240px] bg-[#F0F4FA] border-r border-[#D6E3F3] flex-col z-50">
         {/* Logo */}
         <div className="px-5 pt-5 pb-4 border-b border-[#D6E3F3]">
-          <div className="flex items-center gap-2.5 mb-1">
+          <Link href="/" className="flex items-center gap-2.5 mb-1">
             <SoundKidsLogo size={32} />
             <span
               className="text-xl font-bold text-[#185FA5]"
@@ -31,7 +31,7 @@ export default function BottomNav() {
             >
               SoundKids
             </span>
-          </div>
+          </Link>
           <div className="flex items-center gap-1.5 mt-2">
             <span className="text-xs font-medium text-[#378ADD] bg-[#378ADD]/10 rounded-full px-2 py-0.5">
               3–6 ans

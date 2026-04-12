@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
+import Link from 'next/link'
 import Timer from '@/components/Timer'
 import BottomNav from '@/components/BottomNav'
 import SoundKidsLogo from '@/components/SoundKidsLogo'
@@ -34,13 +35,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <header className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-[#F0F4FA]/95 backdrop-blur-lg border-b border-[#D6E3F3] safe-area-top">
           <div className="max-w-lg mx-auto px-4 pt-2 pb-2">
             <div className="flex items-center gap-2.5 mb-2">
-              <SoundKidsLogo size={28} />
-              <span
-                className="text-lg font-bold text-[#185FA5]"
-                style={{ fontFamily: "'Segoe Script', 'Bradley Hand', 'Lucida Handwriting', cursive" }}
-              >
-                SoundKids
-              </span>
+              <Link href="/" className="flex items-center gap-2.5">
+                <SoundKidsLogo size={28} />
+                <span
+                  className="text-lg font-bold text-[#185FA5]"
+                  style={{ fontFamily: "'Segoe Script', 'Bradley Hand', 'Lucida Handwriting', cursive" }}
+                >
+                  SoundKids
+                </span>
+              </Link>
               <div className="ml-auto flex items-center gap-1.5">
                 <span className="text-xs font-medium text-[#378ADD] bg-[#378ADD]/10 rounded-full px-2 py-0.5">
                   3–6 ans
