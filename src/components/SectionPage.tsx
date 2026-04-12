@@ -29,6 +29,7 @@ export default function SectionPage({ sectionId }: { sectionId: SectionId }) {
   const phase = getPhase(sectionId)
   const [current, setCurrent] = useState(0)
   const tagsRef = useRef<HTMLDivElement>(null)
+  const touchRef = useRef<{ startX: number; startY: number } | null>(null)
 
   const total = phase?.subPhases.length ?? 0
 
@@ -64,6 +65,23 @@ export default function SectionPage({ sectionId }: { sectionId: SectionId }) {
       }
     }
   }, [current])
+
+  // Swipe handling
+  const onTouchStart = useCallback((e: React.TouchEvent) => {
+    touchRef.current = { startX: e.touches[0].clientX, startY: e.touches[0].clientY }
+  }, [])
+
+  const onTouchEnd = useCallback((e: React.TouchEvent) => {
+    if (!touchRef.current) return
+    const dx = e.changedTouches[0].clientX - touchRef.current.startX
+    const dy = e.changedTouches[0].clientY - touchRef.current.startY
+    touchRef.current = null
+    // Only swipe if horizontal movement > 60px and more horizontal than vertical
+    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+      if (dx < 0) next()
+      else prev()
+    }
+  }, [next, prev])
 
   if (!phase) return null
 
@@ -121,39 +139,24 @@ export default function SectionPage({ sectionId }: { sectionId: SectionId }) {
         })}
       </div>
 
-      {/* Current sub-phase content */}
-      <SubPhaseSlide sub={sub} color={phase.color} />
+      {/* Current sub-phase content — swipeable */}
+      <div onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+        <SubPhaseSlide sub={sub} color={phase.color} />
+      </div>
 
-      {/* Prev / Next buttons */}
-      <div className="flex items-center gap-3 pt-2">
-        <button
-          onClick={prev}
-          disabled={current === 0}
-          className={`flex-1 flex items-center justify-center gap-2 rounded-xl py-3 text-sm font-semibold transition-all ${
-            current === 0
-              ? 'bg-[#D6E3F3]/50 text-[#6B87A8]/50 cursor-not-allowed'
-              : 'bg-[#D6E3F3] text-[#185FA5] active:scale-[0.98]'
-          }`}
-        >
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-          </svg>
-          Précédent
-        </button>
-        <button
-          onClick={next}
-          disabled={current === total - 1}
-          className={`flex-1 flex items-center justify-center gap-2 rounded-xl py-3 text-sm font-semibold transition-all ${
-            current === total - 1
-              ? 'bg-[#D6E3F3]/50 text-[#6B87A8]/50 cursor-not-allowed'
-              : `${bgActiveMap[phase.color]} text-white active:scale-[0.98]`
-          }`}
-        >
-          Suivant
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
+      {/* Dots indicator */}
+      <div className="flex items-center justify-center gap-1.5 pt-2">
+        {phase.subPhases.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => goTo(i)}
+            className={`rounded-full transition-all ${
+              i === current
+                ? `w-6 h-2 ${bgActiveMap[phase.color]}`
+                : 'w-2 h-2 bg-[#D6E3F3] hover:bg-[#B8CCDF]'
+            }`}
+          />
+        ))}
       </div>
     </div>
   )
