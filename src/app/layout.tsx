@@ -31,7 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="min-h-dvh flex flex-col">
         {/* Mobile header — hidden on desktop */}
-        <header className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-gray-100 safe-area-top">
+        <header className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-[#F0F4FA]/95 backdrop-blur-lg border-b border-[#D6E3F3] safe-area-top">
           <div className="max-w-lg mx-auto px-4 pt-2 pb-2">
             <div className="flex items-center gap-2.5 mb-2">
               <SoundKidsLogo size={28} />

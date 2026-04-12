@@ -20,9 +20,9 @@ export default function BottomNav() {
   return (
     <>
       {/* Desktop sidebar */}
-      <aside className="hidden lg:flex fixed left-0 top-0 bottom-0 w-[240px] bg-white border-r border-gray-200 flex-col z-50">
+      <aside className="hidden lg:flex fixed left-0 top-0 bottom-0 w-[240px] bg-[#F0F4FA] border-r border-[#D6E3F3] flex-col z-50">
         {/* Logo */}
-        <div className="px-5 pt-5 pb-4 border-b border-gray-100">
+        <div className="px-5 pt-5 pb-4 border-b border-[#D6E3F3]">
           <div className="flex items-center gap-2.5 mb-1">
             <SoundKidsLogo size={32} />
             <span
@@ -52,8 +52,8 @@ export default function BottomNav() {
                 href={tab.href}
                 className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-colors ${
                   active
-                    ? 'bg-[#378ADD]/10 text-[#378ADD]'
-                    : 'text-gray-500 hover:bg-gray-50 hover:text-gray-700'
+                    ? 'bg-[#378ADD]/15 text-[#378ADD]'
+                    : 'text-[#6B87A8] hover:bg-[#378ADD]/5 hover:text-[#378ADD]'
                 }`}
               >
                 <span className="text-lg leading-none">{tab.icon}</span>
@@ -64,7 +64,7 @@ export default function BottomNav() {
         </nav>
 
         {/* Timer at bottom of sidebar */}
-        <div className="px-4 py-4 border-t border-gray-100">
+        <div className="px-4 py-4 border-t border-[#D6E3F3]">
           <div className="text-[10px] font-semibold uppercase tracking-wider text-gray-400 mb-2">
             Chronomètre
           </div>
@@ -73,7 +73,7 @@ export default function BottomNav() {
       </aside>
 
       {/* Mobile bottom nav */}
-      <nav className="lg:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-lg border-t border-gray-200 z-50 safe-area-bottom">
+      <nav className="lg:hidden fixed bottom-0 left-0 right-0 bg-[#F0F4FA]/95 backdrop-blur-lg border-t border-[#D6E3F3] z-50 safe-area-bottom">
         <div className="flex justify-around items-center h-14 max-w-lg mx-auto px-1">
           {tabs.map((tab) => {
             const active = pathname === tab.href

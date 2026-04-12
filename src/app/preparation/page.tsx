@@ -9,13 +9,13 @@ export default function PreparationPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Checklist */}
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-4">
+        <div className="bg-[#F7F9FC] rounded-2xl shadow-sm border border-[#D6E3F3] p-4">
           <h2 className="font-semibold text-gray-900 text-[15px] mb-3">Checklist</h2>
           <Checklist items={checklist} />
         </div>
 
         {/* Matériel */}
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-4">
+        <div className="bg-[#F7F9FC] rounded-2xl shadow-sm border border-[#D6E3F3] p-4">
           <h2 className="font-semibold text-gray-900 text-[15px] mb-3">Matériel complet (20 enfants)</h2>
           <MaterielChecklist categories={materiel} />
         </div>

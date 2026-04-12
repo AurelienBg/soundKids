@@ -23,7 +23,7 @@ export default function PhaseCard({ title, duration, zone, color = 'teal', defau
   const [open, setOpen] = useState(defaultOpen)
 
   return (
-    <div className="rounded-2xl bg-white shadow-sm border border-gray-100 overflow-hidden self-start">
+    <div className="rounded-2xl bg-[#F7F9FC] shadow-sm border border-[#D6E3F3] overflow-hidden self-start">
       <button
         onClick={() => setOpen(!open)}
         className="flex items-center w-full px-4 py-3.5 text-left gap-3"
@@ -54,7 +54,7 @@ export default function PhaseCard({ title, duration, zone, color = 'teal', defau
           {children}
         </div>
         {musicSlot && (
-          <div className="sticky bottom-0 px-4 pb-4 pt-2 bg-gradient-to-t from-white via-white to-white/80 space-y-2 border-t border-gray-50">
+          <div className="sticky bottom-0 px-4 pb-4 pt-2 bg-gradient-to-t from-[#F7F9FC] via-[#F7F9FC] to-[#F7F9FC]/80 space-y-2 border-t border-[#D6E3F3]">
             {musicSlot}
           </div>
         )}
