@@ -6,12 +6,13 @@ import SoundKidsLogo from './SoundKidsLogo'
 import Timer from './Timer'
 
 const tabs = [
+  { href: '/preparation', label: 'Préparation J-1', shortLabel: 'Prép.', icon: '📋' },
   { href: '/introduction', label: 'Introduction', shortLabel: 'Intro', icon: '🎵' },
   { href: '/voyage', label: 'Voyage dans le temps', shortLabel: 'Voyage', icon: '🕰️' },
   { href: '/fabrication', label: 'Fabrication', shortLabel: 'Fabriquer', icon: '🔨' },
   { href: '/concert', label: 'Concert final', shortLabel: 'Concert', icon: '🎶' },
   { href: '/conclusion', label: 'Conclusion', shortLabel: 'Fin', icon: '💫' },
-  { href: '/preparation', label: 'Préparation J-1', shortLabel: 'Prép.', icon: '📋' },
+  { href: '/carnet', label: 'Carnet enfants', shortLabel: 'Carnet', icon: '📘' },
 ]
 
 export default function BottomNav() {
